@@ -32,11 +32,11 @@ bintray {
 
     configurations = ['archives']
     pkg {
-        repo = 'filepickerhelper'
-        name = 'filepickerhelper' //YOUR PACKAGE NAME
+        repo = 'filepickerhelper' // YOUR REPOSITORY NAME FROM BINTRAY ACCOUNT
+        name = 'com.sk.FilePickerHelper' //YOUR PACKAGE NAME FROM BINTRAY ACCOUNT
         desc = 'FilePickerHelper is a library to get multi-type files written in Java.' // YOUR LIBRARY DESCRIPTION
-        websiteUrl = 'https://github.com/filepickerhelper/FilePickerHelper' // YOUR SITE
-        vcsUrl = 'https://github.com/filepickerhelper/FilePickerHelper.git' // YOUR GIT REPO
+        websiteUrl = 'https://github.com/SandipVKalola/FilePickerHelper-Java' // YOUR SITE
+        vcsUrl = 'https://github.com/SandipVKalola/FilePickerHelper-Java.git' // YOUR GIT REPO
         licenses = ["Apache-2.0"] // A LIST OF YOUR LICENCES
         publish = true
         publicDownloadNumbers = true

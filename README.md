@@ -1,7 +1,32 @@
 FilePickerHelper is a library to get multi-type files written in Java.
 
 
-## How to initialize object of `FilePickerHelper`?
+### Gradle
+
+Add following dependency to your root project `build.gradle` file:
+
+```groovy
+allprojects {
+    repositories {
+        ...
+        jcenter()
+        maven { url "https://jitpack.io" }
+        ...
+    }
+}
+```
+
+Add following dependency to your app module `build.gradle` file:
+
+```groovy
+dependencies {
+    ...
+    implementation "com.sk.FilePickerHelper:filepickerhelper:1.0.1"
+    ...
+}
+```
+
+## How to initialize object of `FilePickerHelper`
 
 First way to initialize object of `FilePickerHelper`:
 ```java
@@ -67,11 +92,11 @@ mFilePickerHelper.openFilePickerDialog(REQUEST_CODE);
 
 ## Load Image with glide
 Load Image From local devise
-@param aContext          Activity Context
-@param aImageUri         String Image Uri
-@param aPlaceHolderImage int Default PlaceHolder Image
-@param aErrorImage       int Error PlaceHolder Image
-@param aImageView        View View name which show image from Url
+- @param aContext          Activity Context
+- @param aImageUri         String Image Uri
+- @param aPlaceHolderImage int Default PlaceHolder Image
+- @param aErrorImage       int Error PlaceHolder Image
+- @param aImageView        View View name which show image from Url
    
 `loadImageFromLocal(Context aContext, Uri aImageUri, int aPlaceHolderImage, int aErrorImage, ImageView aImageView)`
 
@@ -92,7 +117,7 @@ mFilePickerHelper.loadImageFromLocal(MainActivity.this,
 - [x] File Pick From SD Card or internal storage 
 - [x] Image/Video Capture From Camera
 - [x] Image/Video Capture From Gallery
-- [x] Max File Support
+- [x] Max File Sixe Support
 - [x] File URI and Path support
 - [x] File Picker with Alert Dialog View
 - [x] File Picker with Bottom Sheet View
@@ -106,11 +131,11 @@ Enable Multidex support as explained in this [Android Doc](https://developer.and
 
 ## Reporting Issue
 
-See [KNOWN_ISSUES](https://github.com/filepickerhelper/FilePickerHelper/blob/master/KNOWN_ISSUES.md) and [CHANGELOG](https://github.com/filepickerhelper/FilePickerHelper/blob/master/CHANGELOG.md) first before reporting any issue. <br />
-Please follow [Issue Template](https://github.com/filepickerhelper/FilePickerHelper/blob/master/Issue_Template_Examples.md) to report any issue.
+See [KNOWN_ISSUES](https://github.com/SandipVKalola/FilePickerHelper-Java/blob/master/KNOWN_ISSUES.md) and [CHANGELOG](https://github.com/filepickerhelper/FilePickerHelper/blob/master/CHANGELOG.md) first before reporting any issue. <br />
+Please follow [Issue Template](https://github.com/SandipVKalola/FilePickerHelper-Java/blob/master/Issue_Template_Examples.md) to report any issue.
 
 ## Share your application
-If you are using FilePickerHelper in your application, share your application link in [this issue](https://github.com/filepickerhelper/FilePickerHelper/issues/1)
+If you are using FilePickerHelper in your application, share your application link in [this issue](https://github.com/SandipVKalola/FilePickerHelper-Java/issues/1)
 
 ### Credits
 1. <a href="https://github.com/bumptech/glide">Glide</a>
