@@ -1,0 +1,39 @@
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = 'com.filepickerhelper' // CREATE A GROUP ID FOR YOUR LIBRARY
+
+install {
+    repositories.mavenInstaller {
+        pom {
+            project {
+                packaging 'aar'
+                groupId 'com.filepickerhelper' // CREATE A GROUP ID FOR YOUR LIBRARY
+                artifactId 'filepickerhelper' // THE NAME OF YOUR MODULE
+
+                name 'FilesPickerHelper' // YOUR LIBRARY NAME
+                description 'FilePickerHelper is a library to get multi-type files written in Java.' // YOUR LIBRARY DESCRIPTION
+                url 'https://github.com/filepickerhelper/FilePickerHelper' // YOUR SITE
+
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id 'filepickerhelper' //YOUR ID
+                        name 'Sandip Kalola' //YOUR NAME
+                        email 'sandipkalola1990@gmail.com' //YOUR EMAIL
+                    }
+                }
+                scm {
+                    connection 'https://github.com/filepickerhelper/FilePickerHelper.git' // YOUR GIT REPO
+                    developerConnection 'https://github.com/filepickerhelper/FilePickerHelper.git' // YOUR GIT REPO
+                    url 'https://github.com/filepickerhelper/FilePickerHelper' // YOUR SITE
+
+                }
+            }
+        }
+    }
+}

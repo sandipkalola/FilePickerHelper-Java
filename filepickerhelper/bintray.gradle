@@ -1,0 +1,44 @@
+apply plugin: 'com.jfrog.bintray'
+
+version = '1.0.1' //YOUR LIBRARY VERSION
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+
+
+// Bintray
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+bintray {
+    user = properties.getProperty("bintray.user")
+    key = properties.getProperty("bintray.apikey")
+
+    configurations = ['archives']
+    pkg {
+        repo = 'filepickerhelper'
+        name = 'filepickerhelper' //YOUR PACKAGE NAME
+        desc = 'FilePickerHelper is a library to get multi-type files written in Java.' // YOUR LIBRARY DESCRIPTION
+        websiteUrl = 'https://github.com/filepickerhelper/FilePickerHelper' // YOUR SITE
+        vcsUrl = 'https://github.com/filepickerhelper/FilePickerHelper.git' // YOUR GIT REPO
+        licenses = ["Apache-2.0"] // A LIST OF YOUR LICENCES
+        publish = true
+        publicDownloadNumbers = true
+    }
+}

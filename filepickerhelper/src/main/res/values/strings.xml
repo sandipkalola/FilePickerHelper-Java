@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FilePickerHelper</string>
+    <string name="title_image_picker">Select Image</string>
+    <string name="txt_Gallery">Gallery</string>
+    <string name="txt_Camera">Camera</string>
+    <string name="txt_file">File</string>
+</resources>
