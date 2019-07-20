@@ -1,30 +1,6 @@
 FilePickerHelper is a library to get multi-type files written in Java.
 
 
-### Gradle
-
-Add following dependency to your root project `build.gradle` file:
-
-```groovy
-allprojects {
-    repositories {
-        ...
-        jcenter()
-        maven { url "https://jitpack.io" }
-        ...
-    }
-}
-```
-
-Add following dependency to your app module `build.gradle` file:
-
-```groovy
-dependencies {
-    ...
-    implementation "com.sk.FilePickerHelper:filepickerhelper:1.0.1"
-    ...
-}
-```
 
 ## How to initialize object of `FilePickerHelper`
 
